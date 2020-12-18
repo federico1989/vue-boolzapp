@@ -5,16 +5,17 @@
 }
 body {
   height: 100vh;
+  font-family: 'Roboto', sans-serif;
   overflow: hidden;
 }
 /* utility */
 .d-flex {
   display: flex;
 }
+/* / utility */
 .main {
   position: relative;
 }
-
 .bg_header {
   height: 80px;
   background: #009688;
@@ -32,7 +33,7 @@ body {
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  background: white;
+  background-color: white;
 }
 /* colonna di sinistra */
 .col_left {
@@ -40,18 +41,23 @@ body {
   height: 100%;
   background: red;
 }
-.top_left {
+/* top left */
+.top_left, .top_right {
   height: 80px;
   padding: 20px;
   justify-content: space-between;
   align-items: center;
   background-color: #eaeaea;
 }
+.top_left {
+  border-right: 1px solid lightgray;
+}
+/* main left */
 .main_left {
   height: 130px;
   justify-content: space-between;
   align-items: center;
-  background-color: yellow;
+  background-color: #fafafa;
 }
 .notifications {
   height: 80px;
@@ -62,7 +68,7 @@ body {
 }
 .notifications > .fa-bell-slash {
   font-size: 25px;
-  border-radius: 30px;
+  border-radius: 50%;
   padding: 10px;
   color: #8edafc;
   border: 1px solid #f2fbff;
@@ -71,9 +77,41 @@ body {
 .new_messages {
   padding: 20px;
 }
+.search {
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.search_card {
+  background-color: white;
+  padding: 10px;
+}
+.search_card > input{
+  border-radius: 5px;
+  border: 1px solid white;
+  width: 250px;
+  font-size: 15px;
+}
+.fa-search {
+  font-size: 15px;
+}
+/* footer left */
+.footer_left {
+  height: 100%;
+  background-color: white;
+  height: calc(500px - 210px);
+  list-style: none;
+  overflow-y: scroll;
+}
 /* /colonna di sinistra */
 .col_right {
   width: 75%;
   height: 100%;
   background: green;
+}
+.main_right {
+  height: 340px;
+  background-image: url("../img/mine.jpg");
+  overflow-y: scroll;
 }
