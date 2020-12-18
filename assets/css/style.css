@@ -28,7 +28,7 @@ body {
 /* container */
 .container {
   width: 1000px;
-  height: 500px;
+  height: 550px;
   position: absolute;
   top: 40px;
   left: 50%;
@@ -39,7 +39,6 @@ body {
 .col_left {
   width: 35%;
   height: 100%;
-  background: red;
 }
 /* top left */
 .top_left, .top_right {
@@ -96,12 +95,27 @@ body {
 .fa-search {
   font-size: 15px;
 }
-/* footer left */
-.footer_left {
+/* bottom left */
+.bottom_left {
   background-color: white;
-  height: calc(500px - 210px);
+  height: calc(500px - 160px);
   list-style: none;
   overflow-y: scroll;
+}
+.contact_list {
+  border-bottom: 1px solid lightgray;
+  padding-top: 10px;
+}
+.contact_list > img {
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 85px;
+}
+.contact_list > h4 {
+  padding-top: 10px;
+  width: 20px;
 }
 /* /colonna di sinistra */
 /* colonna di destra */
@@ -110,7 +124,7 @@ body {
   height: 100%;
 }
 .main_right {
-  height: 340px;
+  height: 390px;
   background-image: url("../img/mine.jpg");
   overflow-y: scroll;
 }

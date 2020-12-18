@@ -43,10 +43,10 @@
               </div>
             </div>
           </div>
-          <div class="footer_left">
-            <ul>
-              <li>ciao</li>
-            </ul>
+          <div class="bottom_left">
+            <div class="contact_list d-flex" v-for="contact in contacts">
+              <img :src="contact.avatar" alt=""><h4>{{contact.name}}</h4>
+            </div>
           </div>
         </div>
         <!-- Colonna di destra -->
