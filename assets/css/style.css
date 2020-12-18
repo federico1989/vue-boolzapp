@@ -4,5 +4,28 @@
   box-sizing: border-box;
 }
 body {
-  
+
+}
+.main_background {
+  position: relative;
+}
+
+.bg_header {
+  height: 80px;
+  background: #009688;
+}
+
+.bg_main {
+  height: calc(700px - 80px);
+  background: #d9dbd5;
+}
+
+.container {
+  width: 1000px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
 }
