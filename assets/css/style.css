@@ -98,20 +98,25 @@ body {
 }
 /* footer left */
 .footer_left {
-  height: 100%;
   background-color: white;
   height: calc(500px - 210px);
   list-style: none;
   overflow-y: scroll;
 }
 /* /colonna di sinistra */
+/* colonna di destra */
 .col_right {
   width: 75%;
   height: 100%;
-  background: green;
 }
 .main_right {
   height: 340px;
   background-image: url("../img/mine.jpg");
   overflow-y: scroll;
+}
+.footer_right {
+  height: 80px;
+  background-color: #fafafa;
+  align-items: center;
+  justify-content: space-around;
 }
