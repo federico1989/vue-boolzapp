@@ -24,7 +24,7 @@
         <div class="col_left">
           <div class="top_left d-flex">
             <div class="user_name d-flex">
-              <img :src="userAvatar" alt="">
+              <img :src="user.avatar" alt="">
               <h4>UserName</h4>
             </div>
             <div class="icons_left">
@@ -49,7 +49,7 @@
             </div>
           </div>
           <div class="bottom_left">
-            <div class="contact_list d-flex" v-for="contact in contacts">
+            <div class="contact_list d-flex" v-for="(contact, index) in contacts" :class="(index === contactActive) ? 'contact active' : 'contact'" @click="setActiveConversation(index)">
               <img :src="contact.avatar" alt=""><h4>{{contact.name}}</h4>
             </div>
           </div>
@@ -58,9 +58,9 @@
         <div class="col_right">
           <div class="top_right d-flex">
             <div class="contact_right d-flex">
-              <img alt="">
+              <img :src="contacts[contactActive].avatar" alt="">
               <div class="user_data">
-                <h4>User name</h4>
+                <h4>{{contacts[contactActive].name}}</h4>
                 <p>Ultimo accesso oggi alle</p>
               </div>
             </div>
@@ -71,7 +71,7 @@
             </div>
           </div>
           <div class="main_right">
-            <div v-for="contact in contacts" class="mess_sent">
+            <div class="mess_sent">
               <h4>Sent</h4>
               <p>Data e ora</p>
             </div>

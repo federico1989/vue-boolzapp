@@ -1,8 +1,10 @@
 let app = new Vue ({
   el: "#app_container",
   data: {
-    userActive: 0,
-    userAvatar: 'assets/img/avatar_4.jpg',
+    user: {
+      name: "Nome Utente",
+      avatar: 'assets/img/avatar_4.jpg'
+    },
     contacts: [
       {
         name: 'Michele',
@@ -86,8 +88,13 @@ let app = new Vue ({
         ],
       },
     ],
-    methods: {
-
+    contactActive: 0,
+  },
+  mounted(){
+  },
+  methods: {
+    setActiveConversation(index) {
+      this.contactActive = index;
     }
   }
 })
