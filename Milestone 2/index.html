@@ -49,7 +49,7 @@
             </div>
           </div>
           <div class="bottom_left">
-            <div class="contact_list d-flex" v-for="(contact, index) in contacts" :class="(index === contactActive) ? 'contact active' : 'contact'" @click="setActiveConversation(index)">
+            <div class="contact_list d-flex" v-for="(contact, index) in contacts" :class="(index === contactActive) ? 'active' : ''" @click="setActiveConversation(index)">
               <img :src="contact.avatar" alt=""><h4>{{contact.name}}</h4>
             </div>
           </div>
@@ -71,13 +71,10 @@
             </div>
           </div>
           <div class="main_right">
-            <div class="mess_sent">
-              <h4>Sent</h4>
-              <p>Data e ora</p>
-            </div>
-            <div class="mess_received">
-              <h4>Rec</h4>
-              <p>Data e ora</p>
+            <div
+            v-for="(message, index) in contacts[contactActive].messages" :class="(message.status == 'sent') ? 'mess_sent' : 'mess_received'">
+              <span>{{message.text}}</span>
+              <p>{{message.date}}</p>
             </div>
           </div>
           <div class="footer_right d-flex">
@@ -92,8 +89,6 @@
       </div>
 
     </div>
-
-
 
 
 
