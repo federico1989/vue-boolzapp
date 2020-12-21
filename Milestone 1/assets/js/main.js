@@ -1,7 +1,7 @@
 let app = new Vue ({
   el: "#app_container",
   data: {
-    utenteAttivo: 0,
+    userActive: 0,
     userAvatar: 'assets/img/avatar_4.jpg',
     contacts: [
       {
