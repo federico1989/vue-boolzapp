@@ -56,10 +56,16 @@ i {
 .user_name {
   align-items: center;
 }
-.user_name > img {
+.user_name > img, .contact_right > img{
   border-radius: 50%;
   border: 1px solid #eaeaea;
   width: 60px;
+}
+.icons_left, .icons_right{
+  font-size: 30px;
+}
+.icons_left >.fa-comment-alt, .icons_right > .fa-paperclip {
+  padding: 15px;
 }
 /* main left */
 .main_left {
@@ -109,7 +115,7 @@ i {
   font-size: 15px;
   margin-left: 5%;
 }
-.fa-search {
+.search_card > .fa-search {
   font-size: 15px;
 }
 /* bottom left */
