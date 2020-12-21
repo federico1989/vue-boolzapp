@@ -12,6 +12,9 @@ body {
 .d-flex {
   display: flex;
 }
+i {
+  color: #b1b1b1;
+}
 /* / utility */
 .main {
   position: relative;
@@ -102,7 +105,7 @@ body {
 .search_card > input {
   border-radius: 5px;
   border: 1px solid white;
-  width: 350px;
+  width: 90%;
   font-size: 15px;
   margin-left: 5%;
 }
@@ -141,6 +144,28 @@ body {
   height: 390px;
   background-image: url("../img/mine.jpg");
   overflow-y: scroll;
+  padding: 40px 60px 0px 60px;
+
+}
+.mess_right {
+  justify-content: flex-end;
+}
+.mess_sent {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d5f9ba;
+  background-color: #d5f9ba;
+  margin-left: 65%;
+  margin-bottom: 15px;
+}
+.mess_received {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  margin-bottom: 15px;
 }
 .footer_right {
   height: 80px;
@@ -148,11 +173,8 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
 .message{
-  width: 80%;
-  background-color: white;
-}
-.message > input{
   border-radius: 5px;
   border: 1px solid white;
   width: 600px;
