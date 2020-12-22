@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="assets/img/whatsapp_icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Boolzapp</title>
+</head>
+  <body>
+    <div class="main">
+      <!-- Sfondo  -->
+      <nav class="main_background">
+        <div class="bg_header">
+        </div>
+        <div class="bg_main">
+        </div>
+      </nav>
+      <!-- Container -->
+      <div class="container d-flex" id="app_container">
+        <!-- Colonna di sinistra -->
+        <div class="col_left">
+          <div class="top_left d-flex">
+            <div class="user_name d-flex">
+              <img :src="user.avatar" alt="">
+              <h4>UserName</h4>
+            </div>
+            <div class="icons_left">
+              <i class="fas fa-circle-notch"></i>
+              <i class="fas fa-comment-alt"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+          <div class="main_left">
+            <div class="notifications d-flex">
+              <i class="fas fa-bell-slash"></i>
+              <div class="new_messages">
+                <h4>Ricevi notifiche di nuovi messaggi</h4>
+                <p>Attiva notifiche desktop</p>
+              </div>
+            </div>
+            <div class="search d-flex">
+              <div class="search_card">
+                <i class="fas fa-search"></i>
+                <input v-model="search" type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+              </div>
+            </div>
+          </div>
+          <div class="bottom_left">
+            <div class="contact_list d-flex" v-for="(contact, index) in filteredItems" :class="(index === contactActive) ? 'active' : ''" @click="setActiveConversation(index)">
+              <img :src="contact.avatar" alt=""><h4>{{contact.name}}</h4>
+            </div>
+          </div>
+        </div>
+        <!-- Colonna di destra -->
+        <div class="col_right">
+          <div class="top_right d-flex">
+            <div class="contact_right d-flex">
+              <img :src="contacts[contactActive].avatar" alt="">
+              <div class="user_data">
+                <h4>{{contacts[contactActive].name}}</h4>
+                <p>Ultimo accesso oggi alle {{ultimoAccesso}}</p>
+              </div>
+            </div>
+            <div class="icons_right">
+              <i class="fas fa-search"></i>
+              <i class="fas fa-paperclip"></i>
+              <i class="fas fa-ellipsis-v"></i>
+            </div>
+          </div>
+          <div class="main_right">
+            <div
+            v-for="(message, index) in contacts[contactActive].messages" :class="(message.status == 'sent') ? 'mess_sent' : 'mess_received'">
+              <span>{{message.text}}</span>
+              <p>{{message.date}}</p>
+            </div>
+          </div>
+          <div class="footer_right d-flex">
+            <div class="smile">
+              <i class="far fa-smile"></i>
+            </div>
+            <input v-on:keyup.enter="addNewMessage" v-model="newMessage" type="text" class="message" name="" value="" placeholder="Scrivi un messaggio">
+            <div class="microphone">
+              <i class="fas fa-microphone"></i>
+            </div>
+          </div>
+      </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

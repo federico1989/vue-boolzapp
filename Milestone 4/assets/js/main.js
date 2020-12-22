@@ -90,6 +90,7 @@ let app = new Vue ({
     ],
     contactActive: 0,
     newMessage: "",
+    search: "",
   },
   mounted(){
   },
@@ -112,6 +113,16 @@ let app = new Vue ({
         text: "Ok",
         status: 'received'
       });
+    }
+  },
+  computed: {
+    ultimoAccesso: function(){
+      return this.contacts[this.contactActive].messages[this.contacts[this.contactActive].messages.length -1].date;
+    },
+    filteredItems: function() {
+      return this.contacts.filter(item => {
+         return item.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
+      })
     }
   }
 })
