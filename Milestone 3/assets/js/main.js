@@ -104,9 +104,9 @@ let app = new Vue ({
         status: 'sent'
       });
       this.newMessage = "";
+      setTimeout(this.replyMessage, 1000);
     },
     replyMessage: function(){
-      setInterval(addNewMessage, 1000);
       this.contacts[this.contactActive].messages.push({
         date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         text: "Ok",
