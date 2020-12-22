@@ -98,8 +98,20 @@ let app = new Vue ({
       this.contactActive = index;
     },
     addNewMessage: function () {
-      this.text.push(this.newMessage);
+      this.contacts[this.contactActive].messages.push({
+        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+        text: this.newMessage,
+        status: 'sent'
+      });
       this.newMessage = "";
     },
+    replyMessage: function(){
+      setInterval(addNewMessage, 1000);
+      this.contacts[this.contactActive].messages.push({
+        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+        text: "Ok",
+        status: 'received'
+      });
+    }
   }
 })
