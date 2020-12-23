@@ -121,8 +121,14 @@ let app = new Vue ({
     },
     filteredItems: function() {
       return this.contacts.filter(item => {
-         return item.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
+       return item.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
       })
-    }
+    },
+    // lastMessage: function() {
+    //   return this.contacts[this.contactActive].messages[this.contacts[this.contactActive].messages.length -1].text;
+    // },
+    // lastDate: function() {
+    //   return this.contacts[this.contactActive].messages[this.contacts[this.contactActive].messages.length -1].date;
+    // }
   }
 })

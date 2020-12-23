@@ -31,9 +31,9 @@ i {
 /* container */
 .container {
   width: 1200px;
-  height: 550px;
+  height: 600px;
   position: absolute;
-  top: 40px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -121,7 +121,7 @@ i {
 /* bottom left */
 .bottom_left {
   background-color: white;
-  height: calc(500px - 160px);
+  height: calc(500px - 120px);
   list-style: none;
   overflow-y: scroll;
 }
@@ -136,9 +136,22 @@ i {
   border: 1px solid transparent;
   width: 85px;
 }
-.contact_list > h4 {
+.name_message {
+  width: 150px;
   padding-top: 10px;
-  width: 20px;
+}
+.contact_list > h4 {
+}
+.contact_list span {
+  font-size: 15px;
+  color: gray;
+}
+.name_message > span {
+  margin-top: 50px;
+}
+.last_date {
+  padding-top: 10px;
+  padding-left: 20px;
 }
 .active {
   background-color: #e9ebeb;
@@ -150,7 +163,7 @@ i {
   height: 100%;
 }
 .main_right {
-  height: 390px;
+  height: 430px;
   background-image: url("../img/mine.jpg");
   overflow-y: scroll;
   padding: 40px 60px 0px 60px;

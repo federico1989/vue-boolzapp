@@ -50,7 +50,14 @@
           </div>
           <div class="bottom_left">
             <div class="contact_list d-flex" v-for="(contact, index) in filteredItems" :class="(index === contactActive) ? 'active' : ''" @click="setActiveConversation(index)">
-              <img :src="contact.avatar" alt=""><h4>{{contact.name}}</h4>
+              <img :src="contact.avatar" alt="">
+              <div class="name_message">
+                <h4>{{contact.name}}</h4>
+                <span>{{lastMessage}}</span>
+              </div>
+              <div class="last_date">
+                <span >{{lastDate}}</span>
+              </div>
             </div>
           </div>
         </div>
